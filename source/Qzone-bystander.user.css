@@ -1,0 +1,27 @@
+@-moz-document domain("qzone.qq.com") {
+.top-fix-inner {
+    margin-top: 0 !important;
+}
+body {
+    background: #F7F7F7;
+}
+.feed-v9 .f-single {
+    background: #fff;
+    border-radius: 2px;
+    padding: 25px;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    width: 549px;
+}
+.feed-v9 .f-single:hover {
+    transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+}
+.feed-v9 .f-single:active {
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    box-shadow: rgba(0, 0, 0, 0.188235) 0px 10px 30px, rgba(0, 0, 0, 0.227451) 0px 6px10px;
+}
+* {
+    font-family: roboto, "思源黑体", "HanaMinA Regular", "HanaMinB Regular", "TH-Khaai-TP0", "TH-Khaai-TP1", "TH-Khaai-TP2", sans-serif;
+}
+}

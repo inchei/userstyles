@@ -1,0 +1,129 @@
+@-moz-document domain("jianshu.com"), domain("bennyli.info"), domain("bilibili.com"), domain("zhihu.com"), domain("www.neat-reader.cn"), domain("github.com"), domain("gitbook.com"), domain("bop.mol.uno"), domain("userstyles.org"), domain("bbs.saraba1st.com"), domain("baidu.com"), domain("about.me"), domain("sass.hk"), domain("v2ex.com"), domain("bbs.tianya.cn"), domain("zhangxinxu.com"), domain("douban.com"), domain("rgbtohex.net"), domain("4chan.org"), domain("kuwo.cn"), domain("coc-zh.jokester.io"), domain("zybuluo.com"), domain("qq.com"), domain("wikipedia.org"), domain("ruanyifeng.com"), domain("www.achu2story.com"), domain("xuebuyuan.com"), domain("cnblogs.com"), domain("stackoverflow.com"), domain("csdn.net"), domain("gitbooks.io"), domain("segmentfault.com"), domain("codeguru.com"), domain("oschina.net"), domain("pudn.com"), domain("runoob.com"), regexp("chrome-extension://.*"), regexp(".*w3school.com.*"), regexp(".*google.*") {
+    ::selection {
+        background: #DAEAFF;
+    }
+}
+    
+@-moz-document domain("bilibili.com"), domain("zhihu.com"), domain("www.neat-reader.cn"), domain("gitbook.com"), domain("bop.mol.uno"), domain("userstyles.org"), domain("bbs.saraba1st.com"), domain("baidu.com"), domain("about.me"), domain("sass.hk"), domain("v2ex.com"), domain("bbs.tianya.cn"), domain("zhangxinxu.com"), domain("douban.com"), domain("rgbtohex.net"), domain("4chan.org"), domain("kuwo.cn"), domain("jianshu.com"), domain("github.com"), domain("qq.com"), domain("anitama.cn"), domain("www.achu2story.com"), domain("xuebuyuan.com"), domain("cnblogs.com"), regexp("chrome-extension://.*"), regexp(".*w3school.com.*") {
+    * {
+        font-family: "lustria", "Noto Serif CJK SC", SimSun, "宋体", "HanaMinA Regular", "HanaMinB Regular", "TH-Khaai-TP0", "TH-Khaai-TP1", "TH-Khaai-TP2", serif !important;
+    }
+}
+
+/***Code styles***/
+/**Fonts**/
+/*global*/
+pre,
+pre *,
+code,
+code *,
+tt,
+tt *,
+kbd,
+kbd *,
+samp,
+samp *,
+textarea,
+textarea *,
+input,
+input *,
+/*Syntaxtic!*/
+.syntaxhighlighter,
+.syntaxhighlighter code,
+.syntaxhighlighter div,
+.syntaxhighlighter a, .syntaxhighlighter div, .syntaxhighlighter code, .syntaxhighlighter table, .syntaxhighlighter table td, .syntaxhighlighter table tr, .syntaxhighlighter table tbody, .syntaxhighlighter table thead, .syntaxhighlighter table caption, .syntaxhighlighter textarea
+/*github*/
+.blob-num,.blob-num::before,
+.pl-c,.pl-c1,.pl-s,.pl-a,.pl-e,.pl-ent,.pl-en,.pl-k,.blob-code-inner,.pl-s1,.pl-pds,.pl-smi,.pl-v,
+/*CodeMirror*/
+.CodeMirror span,
+.CodeMirror-linenumber,
+.RichText pre code span,
+/*cnblogs*/
+.cnblogs-markdown .hljs, .cnblogs-post-body .hljs,
+.cnblogs_code span,
+.cnblogs_code pre{
+    font-family: "inziu Iosevka TC", monospace !important;
+}
+/**Colors**/
+/*cnblogs*/
+.cnblogs_code,
+.cnblogs_code div{
+    background-color: #f6f8fa !important;
+    border: none !important;
+    border-radius: 3px !important;
+    color: #444;
+}
+
+/***Replace fonts***/
+/**SimSun**/
+@font-face {
+  font-family: "SimSun";
+  src: local("Noto Serif CJK SC"), local(Noto-Serif-CJK-SC);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "宋体";
+  src: local("Noto Serif CJK SC"), local(Noto-Serif-CJK-SC);
+  font-weight: normal;
+  font-style: normal;
+}
+/**Consolas**/
+@font-face {
+  font-family: "Consolas";
+  src: local("inziu Iosevka TC"), local(inziu Iosevka TC);
+  font-weight: normal;
+  font-style: normal;
+}
+/**Microsoft YaHei**/
+@font-face {
+    font-family: "Microsoft YaHei";
+    src: local("思源黑体"), local(思源黑体);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "微软雅黑";
+    src: local("思源黑体"), local(思源黑体);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@-moz-document domain("zybuluo.com") {
+    #wmd-preview {
+        font-family: "lustria", "Noto Serif CJK SC", SimSun, "宋体", "HanaMinA Regular", "HanaMinB Regular", "TH-Khaai-TP0", "TH-Khaai-TP1", "TH-Khaai-TP2", serif !important;
+    }
+    .wmd-input,
+    .wmd-input:focus,
+    #md-section-helper {
+        font-family: monospace;
+    }
+}
+
+@-moz-document domain("bbs.saraba1st.com") {
+::selection {
+        background: #37474f;
+        color: #bbb;
+    }
+}
+
+@-moz-document domain("tieba.baidu.com") {
+    *::selection {
+        color: #fff;
+        background-color: var(--m-ecolor);
+        text-shadow: none;
+    }
+}
+
+@-moz-document domain("douban.com") {
+    ::selection {
+        background: #edf4ed;
+    }
+}
+
+@-moz-document domain("github.com"), domain("stackoverflow.com"), domain("csdn.net"), domain("segmentfault.com"), domain("codeguru.com"), domain("efe.baidu.com"), domain("oschina.net"), domain("pudn.com"), domain("lintcode.com"), domain("jobbole.com"), domain("runoob.com") {
+    * {
+    font-family: "inziu Iosevka TC", monospace !important;
+    }
+}

@@ -1,0 +1,820 @@
+@-moz-document domain("moegirl.org"), domain("hmoegirl.com"), domain("wikipedia.org"), domain("wiki.archlinux.org"), domain("wiki.komica.org"), domain("wiktionary.org"), domain("wiki.puella-magi.net") {
+/** Maybe a Material Mediawiki
+    /**
+     * CONTENTS                            目錄
+     *
+     * User configuration                  用戶設置
+     *
+     * Global                              全局
+     * Searchbox                           搜索框
+     * Heimu                               黑幕
+     * Top                                 頂部
+     * Main                                主體
+     * Contents                            目錄
+     * Panel                               導航欄
+     * Thumbimg                            縮略圖
+     * Gallery                             畫廊
+     * Table                               表格
+     * Navbox                              導航盒子
+     * WikiPlus                            WikiPlus
+     * Hidden                              隱藏項目
+     */
+    /* User configuration 用戶設置 */
+    /** Type customized colour if you like.
+        Limit: Chrome | Firefox (Gecko) | Internet Explorer | Opera | Safari (WebKit)
+               -----------------------------------------------------------------------
+               49	  | 31              | none              | 36    | 9.3
+        If you are not using any of above browsers, you can try to find all the
+        variables in this file and replace them into your colours.
+        What trouble! <del>So use Chrome!</del>
+    **/
+    :root {
+        --m-color: #24292e;   /* Main colour */
+        --m-acolor: #0077bb;  /* Links colour */
+        --m-ahcolor: #379FDD; /* Hovered links colour */
+        --m-aacolor: #63B0DD; /* Active links colour */
+        --m-avcolor: #004C7A; /* Visited links colour*/
+        /* Text's colour on the banner. For the dark --m-color, uncomment the first
+           line and comment the second line; for the light --m-color, uncomment the
+           second line and comment the first line. */
+        --m-txtcolor: rgba(255, 255, 255, .95);
+        /*--m-txtcolor: rgba(0, 0, 0, .95);*/
+    }
+    
+    /** Uncomment the following line to use the set style of scrollbar. **/
+    
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, .2);
+        transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        -webkit-transition: all .4s ease;
+        -o-transition: all .4s ease;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, .3);
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, .1);
+    }
+    
+    
+    
+    
+    /*------------------------------------*\
+        #Global 全局
+    \*------------------------------------*/
+    #content,
+    .infoBoxContent,
+    table.wikitable,
+    table.navbox,
+    .infotemplatebox,
+    .acg-works-information,
+    div#simpleSearch,
+    #toc,
+    .toc,
+    #catlinks,
+    .wikiEditor-ui-tabs,
+    .wikiEditor-ui-tabs div,
+    .wikiEditor-ui .wikiEditor-ui-top,
+    .wikiEditor-ui .wikiEditor-ui-view,
+    .editOptions,
+    div.thumbinner,
+    .thumbimage,
+    li.gallerybox div.thumb,
+    .teplate-documentation,
+    .template-documentation-header,
+    .noprint,
+    #topicpath,
+    .vertical-navbox,
+    .infobox.linkBox,
+    .comment-thread,
+    .Wikiplus-InterBox{
+        border: 0 !important;
+    }
+    
+    .infoBox,
+    .wikiEditor-ui .wikiEditor-ui-top,
+    .editOptions,
+    div.thumbinner,
+    li.gallerybox div.thumb,
+    li.gallerybox div.thumb img,
+    table.wikitable,
+    table.navbox,
+    .infotemplatebox,
+    .acg-works-information,
+    .template-documentation,
+    vertical-navbox {
+        box-shadow: 0 1px 5px -1px rgba(0, 0, 0, .2);
+    }
+    
+    div#simpleSearch,
+    #content,
+    #catlinks,
+    .infoBox,
+    .infoBoxContent,
+    div.thumbinner,
+    li.gallerybox div.thumb,
+    li.gallerybox div.thumb img,
+    table.wikitable,
+    .infotemplatebox,
+    .acg-works-information,
+    ::-webkit-scrollbar-thumb,
+    .template-documentation,
+    .noprint,
+    #topicpath,
+    vertical-navbox,
+    .Wikiplus-InterBox {
+        border-radius: 3px;
+    }
+    
+    p,
+    span[lang],
+    #p-personal a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .mw-body-content,
+    html,
+    body,
+    body.skin-vector,
+    .comment-body,
+    .comment-body textarea,
+    .comment-preview,
+    .comment-submit,
+    .footer-info a,
+    div#footer ul li a,
+    div#footer ul li,
+    span[lang=ja],
+    .mw-body-content #toc h2,
+    .mw-body-content .toc h2,
+    .comment-check,
+    .mw-body .mw-editsection,
+    .mainpage-title{
+        font-family: roboto, "思源黑体", "Untitled1", 'HonokaGothic', "TH-Hak-P0", "TH-Tshyn-P0", "TH-Tshyn-P1", "TH-Tshyn-P2", sans-serif;
+    }
+    
+    .mw-body-content h1,
+    .mw-body-content h2,
+    .mw-body-content h3,
+    .mw-body-content h4,
+    .mw-body-content h5,
+    .mw-body-content h6,
+    #firstHeading,
+    .topTitle{
+        font-family: "roboto slab", "思源黑体", "Untitled1", 'HonokaGothic', "TH-Hak-P0", "TH-Tshyn-P0", "TH-Tshyn-P1", "TH-Tshyn-P2", sans-serif;
+    }
+    
+    .mw-body-content h2 {
+        font-size: 1.8em;
+        border-bottom: 1px solid #eee;
+        line-height: 2;
+    }
+    
+    .infotemplatebox {
+        margin: 1em 0 1em 2em;
+    }
+    
+    .mw-content-ltr ul, .mw-content-rtl .mw-content-ltr ul, .mw-content-ltr table ol, .mw-content-rtl .mw-content-ltr table ol {
+        margin-left: 1.2em !important;
+    }
+    
+    
+    
+    
+    
+    /*------------------------------------*\
+        #Searchbox 搜索框
+    \*------------------------------------*/
+    div#simpleSearch {
+        background: rgba(255, 255, 255, .2);
+        transition: all .3s ease-out;
+        width: 8%;
+        position: fixed;
+        left: 20px;
+        top: 14px;
+        opacity: 0;
+    }
+    
+    div#simpleSearch:hover {
+        opacity: 1;
+    }
+    
+    pre,
+    code,
+    tt,
+    kbd,
+    samp,
+    .mw-code,
+    textarea,
+    input,
+    .mw-editfont-monospace {
+        font-family: monospace;
+    }
+    
+    
+    
+    
+    
+    /*------------------------------------*\
+        #Heimu 黑幕
+    \*------------------------------------*/
+    .heimu,
+    .heimu a {
+        background-color: transparent !important;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        transition: all 200ms 300ms;
+    }
+    
+    .heimu a {
+        color: #5DAC81 !important;
+    }
+    
+    .heimu:hover {
+        filter: blur(.2px);
+        -webkit-filter: blur(.2px);
+        -moz-filter: blur(.2px);
+        -o-filter: blur(.2px);
+        color: black !important;
+    }
+    
+    .heimu a:hover {
+        filter: blur(.2px);
+        -webkit-filter: blur(.2px);
+        -moz-filter: blur(.2px);
+        -o-filter: blur(.2px);
+        color: #5DAC81 !important;
+    }
+    
+    
+    
+    
+    
+    /*------------------------------------*\
+        #Top 頂部
+    \*------------------------------------*/
+    #contentSub, #contentSub2 {
+        padding-top: 1em;
+    }
+    .topButton1,
+    .topButton2 {
+        position: absolute;
+        width: 30px;
+        top: 20px;
+        transition: all 300ms ease;
+    }
+    
+    .topButton1:hover,
+    .topButton2:hover {
+        opacity: .8;
+    }
+    
+    .topButton1 {
+        left: 20px;
+    }
+    
+    .topButton2 {
+        right: 20px;
+    }
+    
+    #mw-head-base {
+        margin-top: -5em;
+        margin-left: 0 !important;
+        height: 5em;
+        box-shadow: 0 140px 0 300px var(--m-color);
+        background: var(--m-color);
+        width: 100%;
+    }
+    
+    div#p-personal {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: .7em !important;
+        background: var(--m-color);
+        box-shadow: none;
+        justify-content: space-between;
+        z-index: 999 !important;
+    }
+    
+    #p-personal ul {
+        float: right;
+        color: var(--m-txtcolor);
+        background: transparent;
+        transition: all .3s ease;
+        opacity: 0;
+    }
+    
+    #p-personal ul:hover {
+        opacity: 1;
+    }
+    
+    #p-personal a, #p-personal a.new, #p-personal a.new:visited {
+        color: var(--m-txtcolor);
+    }
+    
+    #pt-notifications-alert .mw-echo-notifications-badge,
+    #pt-notifications-notice .mw-echo-notifications-badge {
+        color: transparent !important;
+    }
+    
+    .mw-echo-ui-notificationBadgeButtonPopupWidget > .oo-ui-popupWidget,
+    #p-personal a.oo-ui-buttonElement-button {
+        color: rgba(0, 0, 0, .9);
+    }
+    
+    .topTitle {
+        color: var(--m-txtcolor);
+        float: left;
+        position: absolute;
+        left: 18%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 20em;
+    }
+    
+    
+    
+    
+    
+    /*------------------------------------*\
+        #Main 主體
+    \*------------------------------------*/
+    strong, b {
+        font-weight: 600;
+    }
+    ::selection {
+        background: #DAEAFF;
+    }
+    
+    html {
+        font-size: 18px;
+    }
+    
+    ul {
+        list-style: url();
+    }
+    
+    .comment-replybox .comment-avatar {
+        margin: 0 30px;
+    }
+    
+    .comment-avatar img {
+        border-radius: 50%;
+        transition: all 300ms ease;
+    }
+    
+    .comment-avatar img:hover {
+        border-radius: 2px;
+        transition: all 300ms ease;
+    }
+    
+    .comment-container {
+        padding: 1em;
+    }
+    
+    @-webkit-keyframes main {
+        from {
+            margin-top: 200px;
+            opacity: 0;
+        }
+        to {
+            margin-top: 165px;
+            opacity: 1;
+        }
+    }
+    
+    .ns-0 div#content,
+    .ns-0 div#p-cactions li a:hover,
+    .ns-0 div#p-cactions li.selected a,
+    .ns-0 div#content div.thumb,
+    div#content,
+    div#p-cactions li a:hover,
+    div#p-cactions li.selected a,
+    div#content div.thumb {
+        background: #fff;
+    }
+    
+    #content {
+        animation: main 500ms;
+        background: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 165px;
+        width: 60%;
+        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+    }
+    
+    @media screen and (max-width: 767px) {
+        #content {
+            width: 100%;
+            border-radius: 0;
+        }
+    }
+    
+    .mw-content-ltr ul, .mw-content-rtl .mw-content-ltr ul, .mw-content-ltr table ol, .mw-content-rt.mw-content-ltr table ol {
+        margin-left: auto;
+    }
+    
+    .mw-body-content h1,.mw-body-content h2,.mw-body-content h3, .mw-body-content h4, .mw-body-content h5, .mw-body-content h6{
+    
+        color: #616161;
+        font-weight: 500;
+    }
+    ::-webkit-input-placeholder,
+    ::input-placeholder{
+        color: rgba(0,0,0,.8);
+    }
+    
+    #firstHeading {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        color: var(--m-txtcolor) !important;
+        width: 100%;
+        text-align: center;
+        transition: all 300ms ease;
+        padding-left: 0;
+        display: inline !important;
+        font-weight: 300;
+        z-index: 998;
+    }
+    
+    #firstHeading:hover {
+        opacity: .8;
+    }
+    
+    span.subpages {
+        margin-left: 10px;
+    }
+    
+    .mw-body {
+        padding: 0;
+    }
+    
+    .mw-body-content {
+        color: rgba(0,0,0,.7);
+        margin: 1em calc(1em + 1pc);
+    }
+    
+    #mw-page-base,
+    body.skin-vector {
+        background: #e9ebec;
+    }
+    
+    a,
+    .mw-body-content a.extiw,
+    .mw-body-content a.extiw:active,
+    .mw-body-content a.external {
+        color: var(--m-acolor);
+        text-decoration: none !important;
+        transition: color .3s ease;
+    }
+    
+    a:visited,
+    .mw-body-content a.external:visited,
+    .mw-body-content a.extiw:visited {
+        color: var(--m-avcolor);
+    }
+    
+    a:active,
+    .mw-body-content a.external:active,
+    .mw-body-content a.extiw:active {
+        color: var(--m-aacolor);
+    }
+    a:hover,
+    .mw-body-content a.external:hover,
+    .mw-body-content a.extiw:hover {
+        color: var(--m-ahcolor);
+    }
+
+    a.mw-disambig.mw-disambig { color: #ff8921; }
+    a.mw-disambig.mw-disambig:visited { color: #d2711b; }
+    a.mw-redirect.mw-disambig { color: #ff6421; }
+    a.mw-redirect.mw-disambig:visited { color: #d2521b; }
+    
+    h1 {
+        border-bottom: none;
+    }
+    
+    .comment-user a,
+    .comment-user a:visited {
+        color: #777;
+    }
+    
+    .comment-container, .comment-replybox, .comment-paginator {
+        background: #eee;
+    }
+    
+    .comment-body textarea, .comment-preview {
+        border-radius: 0;
+    }
+    
+    .comment-replybox .comment-body {
+        margin: 0 60px;
+    }
+    
+    .infoBoxContent {
+        background: #ECEFF1;
+        line-height: 1.3;
+    }
+    
+    .footer-info a,
+    div#footer ul li a,
+    div#footer ul li {
+        color: rgba(0, 0, 0, .7);
+    }
+    
+    div#footer {
+        margin-top: 6rem;
+    }
+    
+    hr {
+        background: #ccc;
+    }
+    
+    @media (max-width: 1116px) {
+        #p-personal ul,
+        #p-personal a {
+            visibility: hidden;
+        }
+    }
+    
+    .wikiEditor-ui-tabs div.current {
+        background: #E0EEF7;
+    }
+    
+    .wikiEditor-ui-toolbar {
+        background-image: url();
+    }
+    
+    .editOptions {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    
+    
+    
+    
+    
+    /*------------------------------------*\
+        #Contents 目錄
+    \*------------------------------------*/
+    #toc,
+    .toc{
+        margin-right: -15%;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh !important;
+        padding: 80px 20px 20px 20px;
+        width: 15% !important;
+        background: rgba(8, 8, 8, .8) !important;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, .2);
+        z-index: 2;
+        opacity: 0;
+        font-size: 1em;
+        overflow-y: auto;
+        transition: all cubic-bezier(.08, .82, .17, 1) 300ms;
+    }
+    
+    .mw-content-ltr .toc ul, .mw-content-ltr #toc ul, .mw-content-rtl .mw-content-ltr .toc ul, .mw-content-rt.mw-content-ltr #toc ul {
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+    }
+    
+    .toctext,
+    #toccontent li a span,
+    .tocnumber {
+        color: rgba(225, 225, 225, .8);
+    }
+    
+    #toc:hover,
+    .toc:hover{
+        margin-right: 0;
+        opacity: 1;
+    }
+    
+    .mainpage-1stcontent {
+        padding: 0;
+    }
+    
+    .sideBarPic.skin-vector:not(.DeceasedPerson) div#mw-panel div.portal {
+        background: none !important;
+    }
+    
+    
+    
+    
+    
+    
+    /*------------------------------------*\
+        #Panel 導航欄
+    \*------------------------------------*/
+    div#mw-panel {
+        margin-left: -15%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh !important;
+        padding: 80px 20px 20px 20px;
+        width: 15% !important;
+        background: rgba(8, 8, 8, .8) !important;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, .2);
+        z-index: 0;
+        opacity: 0;
+        font-size: .9rem;
+        overflow-y: auto;
+        transition: all cubic-bezier(.08, .82, .17, 1) 300ms;
+    }
+    
+    div#mw-panel div.portal div.body ul li a ,
+    div#mw-panel div.portal div.body ul li a:visited,
+    div#mw-panel div.portal h3{
+        color: rgba(225, 225, 225, .8);
+        text-shadow: none;
+    }
+    
+    div#mw-panel div.portal div.body {
+        background: none;
+    }
+    
+    div#mw-panel div.portal div.body ul li,
+    div#mw-panel div.portal h3{
+        font-size: inherit;
+        line-height: 1rem;
+    }
+    
+    div#mw-panel:hover {
+        margin-left: 0;
+        opacity: 1;
+    }
+    
+    
+    
+    
+    
+    /*------------------------------------*\
+        #Thumbimg 縮略圖
+    \*------------------------------------*/
+    div.thumbinner {
+        padding: 8px;
+        overflow: visible;
+        margin-top: 30px;
+    }
+    
+    .thumbimage {
+        margin-top: -30px;
+        box-shadow: 0 1px 4px 0 rgba(50, 50, 50, .2);
+    }
+    
+    
+    
+    
+    
+    /*------------------------------------*\
+        #Gallery 畫廊
+    \*------------------------------------*/
+    li.gallerybox div.thumb {
+        padding: 1px;
+        background: #F9F9F9 !important;
+    }
+    
+    
+    
+    
+    
+    /*------------------------------------*\
+        #Table 表格
+    \*------------------------------------*/
+        table.wikitable>tr>th,
+        table.wikitable>tr>td,
+        table.wikitable>*>tr>th,
+        table.wikitable>*>tr>td {
+        border: .1px solid rgba(0, 0, 0, .1);
+    }
+    
+    table.wikitable {
+        color: rgba(0, 0, 0, .7);
+    }
+    
+    table.wikitable>tr>th,
+    table.wikitable>*>tr>th {
+        background-color: #eaecf0;
+    }
+    
+    
+    
+    
+    
+    /*------------------------------------*\
+        #Navbox 導航盒子
+    \*------------------------------------*/
+    table.navbox {
+        font-size: smaller;
+    }
+    
+    pre,
+    .mw-code,
+    code,
+    .mw-editform #wpTextbox1{
+        background: #F0F0F0;
+        color: #444;
+        border-radius: 3px;
+    }
+    
+    pre::selection,
+    pre a::selection,
+    .mw-code::selection,
+    code::selection,
+    .mw-editform #wpTextbox1::selection{
+        color: #669900;
+        background: none;
+    }
+    
+    
+    
+    
+    /*------------------------------------*\
+        #WikiPuls
+    \*------------------------------------*/
+    .Wikiplus-InterBox {
+        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+    }
+    
+    
+    
+    /*------------------------------------*\
+        #Hidden 隱藏項目
+    \*------------------------------------*/
+    #localNotice,
+    #footer-info-copyright,
+    .mw-editTools,
+    #p-logo,
+    #left-navigation,
+    #right-navigation,
+    .mw-body .mw-editsection-like,
+    .mw-editsection-bracket,
+    #footer-icons,
+    .toctitle,
+    div#simpleSearch #searchButton,
+    .comment-container-top,
+    #siteSub,
+    body.ns-0 #siteSub, body.ns-1 #siteSub{
+        display: none;
+    }
+}
+
+@-moz-document domain("moegirl.org") {
+/*
+.comment-avatar {
+    display: none;
+}
+.comment-thread > div:not(:first-child) .comment-body,
+.comment-body{
+    padding-left: 0;
+}*/
+.mainpage-newsbox {
+    margin-top: 9px;
+}
+:root {
+    --m-color: #9bdea1;   /* Main colour */
+}
+#firstHeading {
+    top: -150px
+}
+}
+
+@-moz-document domain("hmoegirl.com") {
+:root {
+    --m-color: #c73e3e;
+}
+}
+
+@-moz-document domain("wiki.komica.org") {
+:root {
+    --m-color: #DDEEFF;
+    --m-txtcolor: rgba(0, 0, 0, .95);
+}
+}
+
+@-moz-document domain("wiki.puella-magi.net") {
+:root {
+    --m-color: #e0c090;
+}
+}

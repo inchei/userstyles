@@ -1,0 +1,37 @@
+body {
+    background: url(https://binota.org/assets/img/bg.svg) fixed center center / cover;
+}
+.info._6Gx {
+    min-width: 600px;
+    width: 60vw;
+    position: fixed;
+    top: calc(25vh + 200px);
+    left: 20vw;
+    margin: 0;
+    text-align: center;
+    color: #444;
+    padding: 15px;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 10px;
+}
+.category .count._6Gx, .category .time._6Gx, .time.total-time._56 {
+    color: #444;
+}
+.cover._6Gx {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    top: 20vh;
+    left: calc(50vw - 100px);
+}
+.fl-wrapper.fl._6Gx {
+    width: 100%;
+}
+.sound-container._6Gx {
+    overflow: visible;
+    background: none;
+} 
+::selection {
+    background: #f86442;
+    color: #fff;
+}

@@ -1,0 +1,21 @@
+@-moz-document domain("csdn.net") {
+    main div.blog-content-box {
+        color: rgba(0, 0, 0, .65);
+        z-index: 2;
+        padding: 20vh 25vw;
+        margin: 0;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    h1::before,
+    h2::before,
+    h3::before,
+    h4::before,
+    h5::before,
+    h6::before {
+        content: "# ";
+        color: #91AD70;
+    }
+}

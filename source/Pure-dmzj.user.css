@@ -1,0 +1,83 @@
+@-moz-document domain("manhua.dmzj.com") {
+    *,
+    input, button, textarea, select, optgroup, option,
+    html, body, div, h1, h2, h3, h4, h5, h6, p, form, ul, li, dl, dt, dd, ol, table{
+        transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        font-family: "Roboto Slab","Source Han Sans","HanaMinA Regular","HanaMinB Regular","TH-Khaai-TP0","TH-Khaai-TP1","TH-Khaai-TP2";
+    }
+    html {
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+    }
+    
+    html::-webkit-scrollbar {
+        width: 0px;
+    }
+    .mainNav,
+    .header-box,
+    .funcdiv,
+    .display_graybg,
+    .box_text,
+    .hotrmbox,
+    .recom_one,
+    .comic_gd_con p,
+    .comic_gd_con .logod,
+    .footer,
+    .bds_more,
+    div[style="display:inline;float:right;width:220px;text-align:left"],
+    div[style="height:90px;display:block;width:960px;"],
+    div[style="display:inline;float:left;width:220px;height:19px;text-align:left"]{
+        display: none;
+    }
+    #center_box img {
+        min-width: 800px;
+        max-width: 100%;
+        border: 0;
+    }
+    .comic_gd_con .comic_gd_li li {
+        margin: 0;
+    }
+    .comic_gd_con .comic_gd_li li a:hover{
+        border: 0;
+        background: orange;
+        color: white;
+        padding: 10px 13px;
+    }
+    #hd {
+        border: 0 !important;
+        min-width: 800px !important;
+        width: 70% !important;
+    }
+    .btm_chapter_btn,
+    .comic_gd_fb a.subtn{
+        background: #00796B;
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    }
+    .btm_chapter_btn:hover,
+    .comic_gd_fb a.subtn:hover{
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+    }
+    .btm_chapter_btn:active,
+    .comic_gd_fb a.subtn:active{
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.14);
+    }
+    #page_select,
+    .comic_gd_fb .gd_input{
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14) inset;
+    }
+    a {
+        text-decoration: none !important;
+    }
+    .comic_gd_li {
+        opacity: 0;
+        max-width: 50%;
+        float: right;
+    }
+    .comic_gd_li:hover {
+        opacity: 1;
+    }
+}
