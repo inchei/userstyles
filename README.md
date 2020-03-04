@@ -10,7 +10,7 @@
 
 * 部分樣式對本地字體要求可能較高。
 
-* 由於編寫時開啓了 adblock，使用[``我的 adblock 配置文件``](https://raw.githubusercontent.com/inchei/dotfiles/master/adblock.txt)可以獲得更佳體驗。
+* 由於編寫時開啓了 adblock，使用[``我的 adblock 配置文件``](https://raw.githubusercontent.com/inchei/dotfiles/windows/adblock.txt)可以獲得更佳體驗。
 
 * 某些網站的功能可能被大幅削減。
 
